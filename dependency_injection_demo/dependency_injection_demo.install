@@ -1,0 +1,36 @@
+<?php
+
+/*
+* Implement hook_schema().
+*/
+
+function dependency_injection_demo_schema(){
+    $schema['customform'] = array(
+        'fields' => array(
+            'id' => array(
+                'desciption' => 'Primary Identifier',
+                'type' => 'serial',
+                'unassigned' => TRUE,
+                'not null' => TRUE,
+            ),
+
+            'mail' => array(
+                'desciption' => 'Users Mail Address',
+                'type' => 'varchar',
+                'length' => 64,
+                'not null' => FALSE,
+                'default' => '',
+            ),
+
+            'created' => array(
+                'desciption' => 'Created Date',
+                'type' => 'int',
+                'default' => 0,
+                'not null' => TRUE,
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+
+    return $schema;
+}

@@ -1,0 +1,5 @@
+name: Dependency Injection Demo
+type: module
+description: Dependency Injection Service
+core_version_requirement: ^8 || ^9
+package: custom
